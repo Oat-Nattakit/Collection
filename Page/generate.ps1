@@ -3,7 +3,7 @@
 
 $ErrorActionPreference = 'Stop'
 $pageDir     = $PSScriptRoot
-$resourceDir = Join-Path $pageDir '..\Resource'
+$resourceDir = Join-Path (Split-Path $pageDir -Parent) 'Resource'
 $exts        = @('.jpg', '.jpeg', '.png', '.gif', '.webp', '.bmp', '.avif')
 
 $items = @()
